@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8221DA227C38664005FC84E /* GameAttackPerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DA127C38664005FC84E /* GameAttackPerInfo.m */; };
+		D8221DA527C38755005FC84E /* GameBattleGuildInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DA427C38755005FC84E /* GameBattleGuildInfo.m */; };
+		D8221DA827C38902005FC84E /* GameBattleBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DA727C38902005FC84E /* GameBattleBaseInfo.m */; };
+		D8221DAC27C38A9D005FC84E /* GameWizardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DAB27C38A9D005FC84E /* GameWizardInfo.m */; };
+		D8221DAF27C38B8C005FC84E /* GameDefenseDeckInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DAE27C38B8C005FC84E /* GameDefenseDeckInfo.m */; };
+		D8221DB227C38C69005FC84E /* GameDefenseDeckAssignInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DB127C38C69005FC84E /* GameDefenseDeckAssignInfo.m */; };
+		D8221DB527C38CDA005FC84E /* GameDefenseDeckStatusInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DB427C38CDA005FC84E /* GameDefenseDeckStatusInfo.m */; };
+		D8221DB827C38D56005FC84E /* GameUsedUnitCountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DB727C38D56005FC84E /* GameUsedUnitCountInfo.m */; };
+		D8221DBB27C38DA5005FC84E /* GameMemberInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DBA27C38DA5005FC84E /* GameMemberInfo.m */; };
+		D8221DBE27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DBD27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m */; };
+		D8221DC127C39377005FC84E /* GameSetUpValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DC027C39377005FC84E /* GameSetUpValueInfo.m */; };
+		D8221DC427C397F6005FC84E /* GameBattleLogInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DC327C397F6005FC84E /* GameBattleLogInfo.m */; };
+		D8863EAB27BE2415005497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863EAA27BE2415005497B0 /* AppDelegate.m */; };
+		D8863EB127BE2415005497B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863EB027BE2415005497B0 /* ViewController.m */; };
+		D8863EB627BE2418005497B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8863EB527BE2418005497B0 /* Assets.xcassets */; };
+		D8863EB927BE2418005497B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8863EB727BE2418005497B0 /* LaunchScreen.storyboard */; };
+		D8863EBC27BE2418005497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863EBB27BE2418005497B0 /* main.m */; };
+		D8863EC327BE2458005497B0 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = D8863EC227BE2458005497B0 /* info.json */; };
+		D8863ECB27BE27C7005497B0 /* GameBattleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863ECA27BE27C7005497B0 /* GameBattleModel.m */; };
+		D8863ECE27BE4450005497B0 /* GameMatchupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863ECD27BE4450005497B0 /* GameMatchupInfo.m */; };
+		D8863ED127BE4462005497B0 /* GameAttackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863ED027BE4462005497B0 /* GameAttackLog.m */; };
+		D8A4E6C727CE1A1300028C01 /* GameMemberPerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4E6C627CE1A1300028C01 /* GameMemberPerInfo.m */; };
+		D8A5AC6C27C475AA00D5E6E6 /* GameDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A5AC6B27C475AA00D5E6E6 /* GameDataManage.m */; };
+		D8A5AC7027C4B04100D5E6E6 /* GameTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A5AC6F27C4B04100D5E6E6 /* GameTabbarViewController.m */; };
+		D8AB781927C5D34500426E2E /* BatteleBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB781727C5D34500426E2E /* BatteleBaseTableViewCell.m */; };
+		D8AB781A27C5D34500426E2E /* BatteleBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AB781827C5D34500426E2E /* BatteleBaseTableViewCell.xib */; };
+		D8AB781E27C60FEA00426E2E /* UIColor+Up.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB781D27C60FEA00426E2E /* UIColor+Up.m */; };
+		D8AEF78127CF0B0B00B75141 /* MemberDetaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEF78027CF0B0B00B75141 /* MemberDetaiViewController.m */; };
+		E31F8B39D16773AF7BFA66C8 /* libPods-魔灵召唤占领.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0352CBD9E462CA6A5D803216 /* libPods-魔灵召唤占领.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0352CBD9E462CA6A5D803216 /* libPods-魔灵召唤占领.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-魔灵召唤占领.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8030D6A5EE4EC71FACAC23A2 /* Pods-魔灵召唤占领.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-魔灵召唤占领.debug.xcconfig"; path = "Target Support Files/Pods-魔灵召唤占领/Pods-魔灵召唤占领.debug.xcconfig"; sourceTree = "<group>"; };
+		AD20C0DD1BD1A08AB22E1305 /* Pods-魔灵召唤占领.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-魔灵召唤占领.release.xcconfig"; path = "Target Support Files/Pods-魔灵召唤占领/Pods-魔灵召唤占领.release.xcconfig"; sourceTree = "<group>"; };
+		D8221DA027C38664005FC84E /* GameAttackPerInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameAttackPerInfo.h; sourceTree = "<group>"; };
+		D8221DA127C38664005FC84E /* GameAttackPerInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameAttackPerInfo.m; sourceTree = "<group>"; };
+		D8221DA327C38755005FC84E /* GameBattleGuildInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBattleGuildInfo.h; sourceTree = "<group>"; };
+		D8221DA427C38755005FC84E /* GameBattleGuildInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBattleGuildInfo.m; sourceTree = "<group>"; };
+		D8221DA627C38902005FC84E /* GameBattleBaseInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBattleBaseInfo.h; sourceTree = "<group>"; };
+		D8221DA727C38902005FC84E /* GameBattleBaseInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBattleBaseInfo.m; sourceTree = "<group>"; };
+		D8221DAA27C38A9D005FC84E /* GameWizardInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameWizardInfo.h; sourceTree = "<group>"; };
+		D8221DAB27C38A9D005FC84E /* GameWizardInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameWizardInfo.m; sourceTree = "<group>"; };
+		D8221DAD27C38B8C005FC84E /* GameDefenseDeckInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameDefenseDeckInfo.h; sourceTree = "<group>"; };
+		D8221DAE27C38B8C005FC84E /* GameDefenseDeckInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameDefenseDeckInfo.m; sourceTree = "<group>"; };
+		D8221DB027C38C69005FC84E /* GameDefenseDeckAssignInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameDefenseDeckAssignInfo.h; sourceTree = "<group>"; };
+		D8221DB127C38C69005FC84E /* GameDefenseDeckAssignInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameDefenseDeckAssignInfo.m; sourceTree = "<group>"; };
+		D8221DB327C38CDA005FC84E /* GameDefenseDeckStatusInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameDefenseDeckStatusInfo.h; sourceTree = "<group>"; };
+		D8221DB427C38CDA005FC84E /* GameDefenseDeckStatusInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameDefenseDeckStatusInfo.m; sourceTree = "<group>"; };
+		D8221DB627C38D56005FC84E /* GameUsedUnitCountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameUsedUnitCountInfo.h; sourceTree = "<group>"; };
+		D8221DB727C38D56005FC84E /* GameUsedUnitCountInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameUsedUnitCountInfo.m; sourceTree = "<group>"; };
+		D8221DB927C38DA5005FC84E /* GameMemberInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMemberInfo.h; sourceTree = "<group>"; };
+		D8221DBA27C38DA5005FC84E /* GameMemberInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameMemberInfo.m; sourceTree = "<group>"; };
+		D8221DBC27C38EAC005FC84E /* GameSpecialBaseRuleInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSpecialBaseRuleInfo.h; sourceTree = "<group>"; };
+		D8221DBD27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSpecialBaseRuleInfo.m; sourceTree = "<group>"; };
+		D8221DBF27C39377005FC84E /* GameSetUpValueInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSetUpValueInfo.h; sourceTree = "<group>"; };
+		D8221DC027C39377005FC84E /* GameSetUpValueInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSetUpValueInfo.m; sourceTree = "<group>"; };
+		D8221DC227C397F6005FC84E /* GameBattleLogInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBattleLogInfo.h; sourceTree = "<group>"; };
+		D8221DC327C397F6005FC84E /* GameBattleLogInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBattleLogInfo.m; sourceTree = "<group>"; };
+		D8863EA627BE2415005497B0 /* 魔灵召唤占领.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "魔灵召唤占领.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8863EA927BE2415005497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8863EAA27BE2415005497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8863EAF27BE2415005497B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D8863EB027BE2415005497B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D8863EB527BE2418005497B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8863EB827BE2418005497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8863EBB27BE2418005497B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8863EC227BE2458005497B0 /* info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
+		D8863EC927BE27C7005497B0 /* GameBattleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBattleModel.h; sourceTree = "<group>"; };
+		D8863ECA27BE27C7005497B0 /* GameBattleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBattleModel.m; sourceTree = "<group>"; };
+		D8863ECC27BE4450005497B0 /* GameMatchupInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMatchupInfo.h; sourceTree = "<group>"; };
+		D8863ECD27BE4450005497B0 /* GameMatchupInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameMatchupInfo.m; sourceTree = "<group>"; };
+		D8863ECF27BE4462005497B0 /* GameAttackLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameAttackLog.h; sourceTree = "<group>"; };
+		D8863ED027BE4462005497B0 /* GameAttackLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameAttackLog.m; sourceTree = "<group>"; };
+		D8A4E6C527CE1A1300028C01 /* GameMemberPerInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMemberPerInfo.h; sourceTree = "<group>"; };
+		D8A4E6C627CE1A1300028C01 /* GameMemberPerInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameMemberPerInfo.m; sourceTree = "<group>"; };
+		D8A5AC6A27C475A900D5E6E6 /* GameDataManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameDataManage.h; sourceTree = "<group>"; };
+		D8A5AC6B27C475AA00D5E6E6 /* GameDataManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameDataManage.m; sourceTree = "<group>"; };
+		D8A5AC6D27C47C7E00D5E6E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D8A5AC6E27C4B04100D5E6E6 /* GameTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameTabbarViewController.h; sourceTree = "<group>"; };
+		D8A5AC6F27C4B04100D5E6E6 /* GameTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameTabbarViewController.m; sourceTree = "<group>"; };
+		D8A5AC7427C4B42300D5E6E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8A5ACAF27C4D87200D5E6E6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		D8AB781627C5D34500426E2E /* BatteleBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatteleBaseTableViewCell.h; sourceTree = "<group>"; };
+		D8AB781727C5D34500426E2E /* BatteleBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatteleBaseTableViewCell.m; sourceTree = "<group>"; };
+		D8AB781827C5D34500426E2E /* BatteleBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BatteleBaseTableViewCell.xib; sourceTree = "<group>"; };
+		D8AB781C27C60FEA00426E2E /* UIColor+Up.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Up.h"; sourceTree = "<group>"; };
+		D8AB781D27C60FEA00426E2E /* UIColor+Up.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Up.m"; sourceTree = "<group>"; };
+		D8AEF77F27CF0B0B00B75141 /* MemberDetaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberDetaiViewController.h; sourceTree = "<group>"; };
+		D8AEF78027CF0B0B00B75141 /* MemberDetaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberDetaiViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8863EA327BE2415005497B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31F8B39D16773AF7BFA66C8 /* libPods-魔灵召唤占领.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63FBDE20A883B565788CAE0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0352CBD9E462CA6A5D803216 /* libPods-魔灵召唤占领.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C74622F424AC97C499BE396 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8030D6A5EE4EC71FACAC23A2 /* Pods-魔灵召唤占领.debug.xcconfig */,
+				AD20C0DD1BD1A08AB22E1305 /* Pods-魔灵召唤占领.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8221DA927C38A79005FC84E /* GameBase */ = {
+			isa = PBXGroup;
+			children = (
+				D8221DA327C38755005FC84E /* GameBattleGuildInfo.h */,
+				D8221DA427C38755005FC84E /* GameBattleGuildInfo.m */,
+				D8221DA627C38902005FC84E /* GameBattleBaseInfo.h */,
+				D8221DA727C38902005FC84E /* GameBattleBaseInfo.m */,
+				D8221DAA27C38A9D005FC84E /* GameWizardInfo.h */,
+				D8221DAB27C38A9D005FC84E /* GameWizardInfo.m */,
+				D8221DAD27C38B8C005FC84E /* GameDefenseDeckInfo.h */,
+				D8221DAE27C38B8C005FC84E /* GameDefenseDeckInfo.m */,
+				D8221DB027C38C69005FC84E /* GameDefenseDeckAssignInfo.h */,
+				D8221DB127C38C69005FC84E /* GameDefenseDeckAssignInfo.m */,
+				D8221DB327C38CDA005FC84E /* GameDefenseDeckStatusInfo.h */,
+				D8221DB427C38CDA005FC84E /* GameDefenseDeckStatusInfo.m */,
+				D8221DB627C38D56005FC84E /* GameUsedUnitCountInfo.h */,
+				D8221DB727C38D56005FC84E /* GameUsedUnitCountInfo.m */,
+				D8221DB927C38DA5005FC84E /* GameMemberInfo.h */,
+				D8221DBA27C38DA5005FC84E /* GameMemberInfo.m */,
+				D8221DBC27C38EAC005FC84E /* GameSpecialBaseRuleInfo.h */,
+				D8221DBD27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m */,
+				D8221DC227C397F6005FC84E /* GameBattleLogInfo.h */,
+				D8221DC327C397F6005FC84E /* GameBattleLogInfo.m */,
+			);
+			path = GameBase;
+			sourceTree = "<group>";
+		};
+		D8863E9D27BE2415005497B0 = {
+			isa = PBXGroup;
+			children = (
+				D8863EA827BE2415005497B0 /* 魔灵召唤占领 */,
+				D8863EA727BE2415005497B0 /* Products */,
+				7C74622F424AC97C499BE396 /* Pods */,
+				63FBDE20A883B565788CAE0B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D8863EA727BE2415005497B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8863EA627BE2415005497B0 /* 魔灵召唤占领.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8863EA827BE2415005497B0 /* 魔灵召唤占领 */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB781B27C60FAF00426E2E /* Function */,
+				D8863EC627BE2498005497B0 /* Tool */,
+				D8863EC527BE248F005497B0 /* Moudle */,
+				D8863EC427BE2486005497B0 /* Data */,
+				D8863EC227BE2458005497B0 /* info.json */,
+				D8863EA927BE2415005497B0 /* AppDelegate.h */,
+				D8863EAA27BE2415005497B0 /* AppDelegate.m */,
+				D8863EB527BE2418005497B0 /* Assets.xcassets */,
+				D8863EB727BE2418005497B0 /* LaunchScreen.storyboard */,
+				D8A5AC7427C4B42300D5E6E6 /* Info.plist */,
+				D8863EBB27BE2418005497B0 /* main.m */,
+			);
+			path = "魔灵召唤占领";
+			sourceTree = "<group>";
+		};
+		D8863EC427BE2486005497B0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D8A4E6C427CE19DE00028C01 /* MemberInfo */,
+				D8863ED527BE448B005497B0 /* GameBattle */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D8863EC527BE248F005497B0 /* Moudle */ = {
+			isa = PBXGroup;
+			children = (
+				D8863EC827BE24B0005497B0 /* View */,
+				D8863EC727BE24A5005497B0 /* ViewController */,
+			);
+			path = Moudle;
+			sourceTree = "<group>";
+		};
+		D8863EC627BE2498005497B0 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D8A5AC6A27C475A900D5E6E6 /* GameDataManage.h */,
+				D8A5AC6B27C475AA00D5E6E6 /* GameDataManage.m */,
+				D8A5AC6D27C47C7E00D5E6E6 /* PrefixHeader.pch */,
+				D8A5ACAF27C4D87200D5E6E6 /* Header.h */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D8863EC727BE24A5005497B0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8863EAF27BE2415005497B0 /* ViewController.h */,
+				D8863EB027BE2415005497B0 /* ViewController.m */,
+				D8A5AC6E27C4B04100D5E6E6 /* GameTabbarViewController.h */,
+				D8A5AC6F27C4B04100D5E6E6 /* GameTabbarViewController.m */,
+				D8AEF77F27CF0B0B00B75141 /* MemberDetaiViewController.h */,
+				D8AEF78027CF0B0B00B75141 /* MemberDetaiViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D8863EC827BE24B0005497B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB781627C5D34500426E2E /* BatteleBaseTableViewCell.h */,
+				D8AB781727C5D34500426E2E /* BatteleBaseTableViewCell.m */,
+				D8AB781827C5D34500426E2E /* BatteleBaseTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8863ED527BE448B005497B0 /* GameBattle */ = {
+			isa = PBXGroup;
+			children = (
+				D8863EC927BE27C7005497B0 /* GameBattleModel.h */,
+				D8863ECA27BE27C7005497B0 /* GameBattleModel.m */,
+				D8863ED727BE44BE005497B0 /* AttackLog */,
+				D8221DA927C38A79005FC84E /* GameBase */,
+				D8863ED627BE449E005497B0 /* MatchUpInfo */,
+			);
+			path = GameBattle;
+			sourceTree = "<group>";
+		};
+		D8863ED627BE449E005497B0 /* MatchUpInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D8863ECC27BE4450005497B0 /* GameMatchupInfo.h */,
+				D8863ECD27BE4450005497B0 /* GameMatchupInfo.m */,
+				D8221DBF27C39377005FC84E /* GameSetUpValueInfo.h */,
+				D8221DC027C39377005FC84E /* GameSetUpValueInfo.m */,
+			);
+			path = MatchUpInfo;
+			sourceTree = "<group>";
+		};
+		D8863ED727BE44BE005497B0 /* AttackLog */ = {
+			isa = PBXGroup;
+			children = (
+				D8863ECF27BE4462005497B0 /* GameAttackLog.h */,
+				D8863ED027BE4462005497B0 /* GameAttackLog.m */,
+				D8221DA027C38664005FC84E /* GameAttackPerInfo.h */,
+				D8221DA127C38664005FC84E /* GameAttackPerInfo.m */,
+			);
+			path = AttackLog;
+			sourceTree = "<group>";
+		};
+		D8A4E6C427CE19DE00028C01 /* MemberInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D8A4E6C527CE1A1300028C01 /* GameMemberPerInfo.h */,
+				D8A4E6C627CE1A1300028C01 /* GameMemberPerInfo.m */,
+			);
+			path = MemberInfo;
+			sourceTree = "<group>";
+		};
+		D8AB781B27C60FAF00426E2E /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB781C27C60FEA00426E2E /* UIColor+Up.h */,
+				D8AB781D27C60FEA00426E2E /* UIColor+Up.m */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8863EA527BE2415005497B0 /* 魔灵召唤占领 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8863EBF27BE2418005497B0 /* Build configuration list for PBXNativeTarget "魔灵召唤占领" */;
+			buildPhases = (
+				CCA52E3DB1893796BF95BAC3 /* [CP] Check Pods Manifest.lock */,
+				D8863EA227BE2415005497B0 /* Sources */,
+				D8863EA327BE2415005497B0 /* Frameworks */,
+				D8863EA427BE2415005497B0 /* Resources */,
+				012B19696FACF4FE074D6FC7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "魔灵召唤占领";
+			productName = "魔灵召唤占领";
+			productReference = D8863EA627BE2415005497B0 /* 魔灵召唤占领.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8863E9E27BE2415005497B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					D8863EA527BE2415005497B0 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = D8863EA127BE2415005497B0 /* Build configuration list for PBXProject "魔灵召唤占领" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8863E9D27BE2415005497B0;
+			productRefGroup = D8863EA727BE2415005497B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8863EA527BE2415005497B0 /* 魔灵召唤占领 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8863EA427BE2415005497B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8AB781A27C5D34500426E2E /* BatteleBaseTableViewCell.xib in Resources */,
+				D8863EC327BE2458005497B0 /* info.json in Resources */,
+				D8863EB927BE2418005497B0 /* LaunchScreen.storyboard in Resources */,
+				D8863EB627BE2418005497B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		012B19696FACF4FE074D6FC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-魔灵召唤占领/Pods-魔灵召唤占领-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-魔灵召唤占领/Pods-魔灵召唤占领-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-魔灵召唤占领/Pods-魔灵召唤占领-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCA52E3DB1893796BF95BAC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-魔灵召唤占领-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8863EA227BE2415005497B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A5AC6C27C475AA00D5E6E6 /* GameDataManage.m in Sources */,
+				D8221DA827C38902005FC84E /* GameBattleBaseInfo.m in Sources */,
+				D8221DB227C38C69005FC84E /* GameDefenseDeckAssignInfo.m in Sources */,
+				D8863ECB27BE27C7005497B0 /* GameBattleModel.m in Sources */,
+				D8AEF78127CF0B0B00B75141 /* MemberDetaiViewController.m in Sources */,
+				D8863EB127BE2415005497B0 /* ViewController.m in Sources */,
+				D8221DAF27C38B8C005FC84E /* GameDefenseDeckInfo.m in Sources */,
+				D8AB781E27C60FEA00426E2E /* UIColor+Up.m in Sources */,
+				D8221DC127C39377005FC84E /* GameSetUpValueInfo.m in Sources */,
+				D8AB781927C5D34500426E2E /* BatteleBaseTableViewCell.m in Sources */,
+				D8A5AC7027C4B04100D5E6E6 /* GameTabbarViewController.m in Sources */,
+				D8863ECE27BE4450005497B0 /* GameMatchupInfo.m in Sources */,
+				D8221DA227C38664005FC84E /* GameAttackPerInfo.m in Sources */,
+				D8221DAC27C38A9D005FC84E /* GameWizardInfo.m in Sources */,
+				D8863EAB27BE2415005497B0 /* AppDelegate.m in Sources */,
+				D8221DBB27C38DA5005FC84E /* GameMemberInfo.m in Sources */,
+				D8A4E6C727CE1A1300028C01 /* GameMemberPerInfo.m in Sources */,
+				D8863ED127BE4462005497B0 /* GameAttackLog.m in Sources */,
+				D8863EBC27BE2418005497B0 /* main.m in Sources */,
+				D8221DBE27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m in Sources */,
+				D8221DB527C38CDA005FC84E /* GameDefenseDeckStatusInfo.m in Sources */,
+				D8221DC427C397F6005FC84E /* GameBattleLogInfo.m in Sources */,
+				D8221DA527C38755005FC84E /* GameBattleGuildInfo.m in Sources */,
+				D8221DB827C38D56005FC84E /* GameUsedUnitCountInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8863EB727BE2418005497B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8863EB827BE2418005497B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8863EBD27BE2418005497B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8863EBE27BE2418005497B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8863EC027BE2418005497B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8030D6A5EE4EC71FACAC23A2 /* Pods-魔灵召唤占领.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RFXHYRH6M4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/魔灵召唤占领/Tool/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "魔灵召唤占领/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要相册许可，才能获取宠宠照片";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.molingzhaohuanattack.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8863EC127BE2418005497B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD20C0DD1BD1A08AB22E1305 /* Pods-魔灵召唤占领.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RFXHYRH6M4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/魔灵召唤占领/Tool/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "魔灵召唤占领/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要相册许可，才能获取宠宠照片";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.molingzhaohuanattack.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8863EA127BE2415005497B0 /* Build configuration list for PBXProject "魔灵召唤占领" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8863EBD27BE2418005497B0 /* Debug */,
+				D8863EBE27BE2418005497B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8863EBF27BE2418005497B0 /* Build configuration list for PBXNativeTarget "魔灵召唤占领" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8863EC027BE2418005497B0 /* Debug */,
+				D8863EC127BE2418005497B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8863E9E27BE2415005497B0 /* Project object */;
+}

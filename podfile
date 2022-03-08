@@ -1,0 +1,14 @@
+
+platform :ios, ’13.0’
+
+def pods
+ 	pod 'AFNetworking', '~> 3.0'
+	pod "SDWebImage"
+ 	pod "MJExtension"
+ 	pod "MJRefresh" 
+ 	pod 'Masonry'
+end
+ 
+target ‘魔灵召唤占领’ do
+pods
+end
