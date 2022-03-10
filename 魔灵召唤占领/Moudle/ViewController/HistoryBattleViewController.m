@@ -1,14 +1,15 @@
 //
-//  MemberDetaiViewController.m
+//  HistoryBattleViewController.m
 //  魔灵召唤占领
 //
-//  Created by Future on 2022/3/2.
+//  Created by Future on 2022/3/10.
 //
 
-#import "MemberDetaiViewController.h"
+#import "HistoryBattleViewController.h"
 #import "BatteleBaseTableViewCell.h"
 #import "GameMemberPerInfo.h"
-@interface MemberDetaiViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "MemberDetaiViewController.h"
+@interface HistoryBattleViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIImageView * imageView;
 @property (nonatomic,strong) UIButton * navImageView;
 @property (nonatomic,strong) UITableView * tableView;
@@ -18,22 +19,24 @@
 @property (nonatomic,strong) UIButton * backBtn;
 @property (nonatomic,strong) UIImage * image;
 @property (nonatomic,strong) NSMutableArray * memberDataSource;
+@property (nonatomic,strong) NSMutableArray * otherGuildDataSource;
 
 @end
 
-@implementation MemberDetaiViewController
+@implementation HistoryBattleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"据点成员数据";
-    self.titleNameArray =  @[@[@"公会成员",@"胜利",@"贡献度",@"已出刀",@"防守成功"]];
+    self.titleNameArray =  @[@[@"公会名称",@"战斗人数",@"进攻数量",@"当前分值",@"增长分值"],@[@"战斗双方(Attack)",@"战斗双方(Defense)",@"攻击占比",@"攻击成功",@"防守成功"]];
     self.view.backgroundColor = UIColor.whiteColor;
     [self createSubView];
-     
+    self.navigationController.navigationBar.hidden = YES;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
     });
-    
+    self.shareBtn.frame = CGRectMake(SCREEN_WIDTH - 40 - 10 , 50, 40, 40);
+    [self.view addSubview:self.shareBtn];
+    self.otherGuildDataSource = [NSMutableArray arrayWithArray:[[GameDataManage shareManage]getOtherGuildInfo]];
     [self sortMemberDataSource];
     // Do any additional setup after loading the view.
 }
@@ -45,8 +48,6 @@
     self.imageView.frame = self.view.bounds;
     self.imageView.alpha = 0.4;
     [self.view addSubview:self.tableView];
-    self.shareBtn.frame = CGRectMake(SCREEN_WIDTH - 40 - 10 , 50, 40, 40);
-    [self.view addSubview:self.shareBtn];
     self.backBtn.frame = CGRectMake(15 , 50, 70, 70);
     [self.view addSubview:self.backBtn];
 }
@@ -62,24 +63,9 @@
         _tableView.backgroundColor = UIColor.clearColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:@"BatteleBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BatteleBaseTableViewCell"];
-        
     }
     return _tableView;
     
-}
--(double)getAttackWinCount{
-    double count = 0;
-    for (GameMemberPerInfo* model in self.memberDataSource) {
-        count += model.attact_win_count;
-    }
-    return  count;
-}
--(double)getDefenseWinCount{
-    double count = 0;
-    for (GameMemberPerInfo* model in self.memberDataSource) {
-        count += model.defense_win_count;
-    }
-    return  count;
 }
 -(void)sortMemberDataSource{
     //用这个方法
@@ -101,25 +87,54 @@
     cell.backgroundColor = UICOLOR_RGB(255, 255, 255, 0.8);
     cell.contentView.backgroundColor = UICOLOR_RGB(255, 255, 255, 0.8);
     cell.gonghuiNameLabel.adjustsFontSizeToFitWidth = YES;
-    
-    NSArray * memberInfoArr = [self.memberDataSource copy];
-    if (indexPath.row < memberInfoArr.count){
-        GameMemberPerInfo * model = memberInfoArr[indexPath.row];
-        cell.gonghuiNameLabel.text = [NSString stringWithFormat:@"%@. %@",@(indexPath.row + 1),model.wizard_name] ;
-        double attactWin = model.attact_win_count;
-        double attactTotal = model.attact_total_count;
-        double attackRate = (attactTotal == 0 ? 0 :  attactWin/attactTotal*100);
-        cell.attackRateLabel.text = [NSString stringWithFormat:@"%@/%@  (%.f%@)",@(model.attact_win_count),@(attactTotal),attackRate,@"%"];
-        cell.attackCountLabel.text = [NSString stringWithFormat:@"%@",@(model.battleScore)];
-        cell.currentScoreLabel.text = [NSString stringWithFormat:@"%@/10",@(model.attact_total_count)];
-        cell.defenseBattleRateLabel.text = [NSString stringWithFormat:@"%@/%@",@(model.defense_win_count),@(model.defense_total_count)];
-        cell.attackRateLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
-        cell.attackCountLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
-        cell.currentScoreLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
-        cell.defenseBattleRateLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
-        cell.gonghuiNameLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
+    if (indexPath.section == 0) {
+        cell.gonghuiNameLabel.textAlignment = NSTextAlignmentLeft;
+        NSArray * dataSource = [[GameDataManage shareManage].dataModel.matchup_info.guild_list copy];
+        if (indexPath.row < dataSource.count) {
+            GameBattleGuildInfo * model = dataSource[indexPath.row];
+            cell.gonghuiNameLabel.text = model.guild_name;
+            double attackWinConunt = [[GameDataManage shareManage] getSelfGuildAttackCount];
+            double totalAttackCount = model.attack_count;
+            double attackWinRate = (attackWinConunt/ totalAttackCount)*100;
+            cell.attackRateLabel.text =  [NSString stringWithFormat:@"%@",@(model.play_member_count)];
+            cell.attackCountLabel.text = [NSString stringWithFormat:@"%@/250",@(model.attack_count)];
+            cell.currentScoreLabel.text = [NSString stringWithFormat:@"%.f",model.match_score];
+            cell.defenseBattleRateLabel.text = [NSString stringWithFormat:@"%ld/min",model.match_score_increment];
+        }
+    }else{
+        cell.gonghuiNameLabel.textAlignment = NSTextAlignmentCenter;
+        GameBattleGuildInfo * otherCurModel = nil;
+        GameBattleGuildInfo * selfCurModel = [[GameDataManage shareManage]getSelfGuildInfo];
+        if (indexPath.row < self.otherGuildDataSource.count) {
+            otherCurModel = self.otherGuildDataSource[indexPath.row];
+            cell.gonghuiNameLabel.text = [NSString stringWithFormat:@"%@",selfCurModel.guild_name];
+            cell.attackRateLabel.text = [NSString stringWithFormat:@"%@",otherCurModel.guild_name];
+            
+            double attackTotalCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:selfCurModel.guild_id defenseGuildId:otherCurModel.guild_id type:0];
+            double attackWinCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:selfCurModel.guild_id defenseGuildId:otherCurModel.guild_id type:1];
+            double defenseTotalCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:selfCurModel.guild_id defenseGuildId:otherCurModel.guild_id type:2];
+            double defenseWinCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:selfCurModel.guild_id defenseGuildId:otherCurModel.guild_id type:3];
+            
+            cell.attackCountLabel.text = [NSString stringWithFormat:@"%@/%@ (%.f%@)",@(attackTotalCount),@(selfCurModel.attack_count),attackTotalCount/selfCurModel.attack_count*100,@"%"];
+            cell.currentScoreLabel.text = [NSString stringWithFormat:@"%@/%@(%.f%@)",@(attackWinCount),@(attackTotalCount),attackWinCount/attackTotalCount*100,@"%"];
+            cell.defenseBattleRateLabel.text = [NSString stringWithFormat:@"%@/%@ (%.f%@)",@(defenseWinCount),@(defenseTotalCount),defenseWinCount/defenseTotalCount*100,@"%"];
+        }else{
+            if ((indexPath.row - self.otherGuildDataSource.count) <= self.otherGuildDataSource.count) {
+                otherCurModel = self.otherGuildDataSource[(indexPath.row - self.otherGuildDataSource.count)];
+                cell.gonghuiNameLabel.text = [NSString stringWithFormat:@"%@",otherCurModel.guild_name];
+                cell.attackRateLabel.text = [NSString stringWithFormat:@"%@",selfCurModel.guild_name];
+                
+                double attackTotalCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:otherCurModel.guild_id defenseGuildId:selfCurModel.guild_id type:0];
+                double attackWinCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:otherCurModel.guild_id defenseGuildId:selfCurModel.guild_id type:1];
+                double defenseTotalCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:otherCurModel.guild_id defenseGuildId:selfCurModel.guild_id type:2];
+                double defenseWinCount = [[GameDataManage shareManage]getGuildAttackOtherGuildData:otherCurModel.guild_id defenseGuildId:selfCurModel.guild_id type:3];
+                
+                cell.attackCountLabel.text = [NSString stringWithFormat:@"%@/%@ (%.f%@)",@(attackTotalCount),@(otherCurModel.attack_count),attackTotalCount/otherCurModel.attack_count*100,@"%"];
+                cell.currentScoreLabel.text = [NSString stringWithFormat:@"%@/%@(%.f%@)",@(attackWinCount),@(attackTotalCount),attackWinCount/attackTotalCount*100,@"%"];
+                cell.defenseBattleRateLabel.text = [NSString stringWithFormat:@"%@/%@ (%.f%@)",@(defenseWinCount),@(defenseTotalCount),defenseWinCount/defenseTotalCount*100,@"%"];
+            }
+        }
     }
-    
     return  cell;
     
 }
@@ -134,28 +149,14 @@
     return  footerView;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 80;
+    return 40;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH - 20, 80)];
+    UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH - 20, 40)];
     headerView.backgroundColor = UICOLOR_RGB(247, 142, 21, 0.8);
     CGFloat width = (SCREEN_WIDTH - 20 )/5.0;
     NSArray * curTitleArr = self.titleNameArray[section];
     for (int i = 0; i < curTitleArr.count; i++) {
-        if (i == 0) {
-            double totalAttackCount = [[GameDataManage shareManage]getSelfGuildInfo].attack_count;
-            double winAttackCount = [self getAttackWinCount];
-            NSString * name = [NSString stringWithFormat:@"整体进攻胜率：%.f%@",winAttackCount/totalAttackCount*100,@"%"];
-            UILabel*label = [[UILabel alloc]init];
-            label.text = name;
-            label.textColor = UIColor.blueColor;
-            label.alpha = 0.6;
-            label.backgroundColor = UIColor.redColor;
-            label.font = [UIFont boldSystemFontOfSize:14];
-            label.textAlignment = NSTextAlignmentCenter;
-            label.frame = CGRectMake(width*i, 0, width, 40);
-            [headerView addSubview:label];
-        }
         NSString * name = curTitleArr[i];
         UILabel*label = [[UILabel alloc]init];
         label.text = name;
@@ -163,32 +164,37 @@
         label.alpha = 0.6;
         label.font = [UIFont boldSystemFontOfSize:14];
         label.textAlignment = NSTextAlignmentCenter;
-        label.frame = CGRectMake(width*i, 40, width, 40);
+        label.frame = CGRectMake(width*i, 0, width, 40);
         [headerView addSubview:label];
     }
     return headerView;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return  1;
+    return  self.titleNameArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return   self.memberDataSource.count > 25 ? 25 : self.memberDataSource.count;
+    if (section == 1) {
+        return self.otherGuildDataSource.count*2;
+    }
+    return  [GameDataManage shareManage].dataModel.matchup_info.guild_list.count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:false];
+    if (indexPath.section == 0) {
+        MemberDetaiViewController * vc = [[MemberDetaiViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 -(void)showBattleDataImage:(UIButton*)sender{
-    self.image = [self screenshotForView:self.tableView];
-    
-    if (self.image) {
-        UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
-    }
-}
--(void)clickBackBtn:(UIButton*)sender{
-    [self.navigationController popViewControllerAnimated:YES];
+//    self.image = [self screenshotForView:self.tableView];
+    MemberDetaiViewController * vc = [[MemberDetaiViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+//    if (self.image) {
+//        UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+//    }
 }
 // 指定回调方法
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
@@ -237,8 +243,10 @@
     UIGraphicsEndImageContext();
     return image;
 }
+-(void)clickBackBtn:(UIButton*)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - Lazy load
-
 -(UIButton *)backBtn{
     if (!_backBtn) {
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -283,5 +291,14 @@
     }
     return  _memberDataSource;
 }
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

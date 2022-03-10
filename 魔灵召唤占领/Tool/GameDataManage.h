@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(long)getDefenseWinCount:(long)userId;
 -(long)getDefenseLoseCount:(long)userId;
 // 获取组合后的成员信息数据
--(NSArray*)getSetUpTotalMemberInfo;
+-(NSArray*)getMachUpTotalMemberInfo;
 // 获取 公会 PK 公会 总计的攻击次数
 /*
    type   0 获取攻击次数。 1 获取攻击成功次数 2 获取防守的次数  3 获取防守成功次数

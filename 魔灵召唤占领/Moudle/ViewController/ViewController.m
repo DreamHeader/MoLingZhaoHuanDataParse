@@ -16,6 +16,7 @@
 @property (nonatomic,strong) NSMutableArray * dataSource;
 @property (nonatomic,strong) NSArray * titleNameArray;
 @property (nonatomic,strong) UIButton * shareBtn;
+@property (nonatomic,strong) UIButton * backBtn;
 @property (nonatomic,strong) UIImage * image;
 @property (nonatomic,strong) NSMutableArray * memberDataSource;
 @property (nonatomic,strong) NSMutableArray * otherGuildDataSource;
@@ -25,16 +26,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleNameArray =  @[@[@"公会名称",@"战斗人数",@"进攻数量",@"当前分值",@"增长分值"],@[@"战斗双方(Attack)",@"战斗双方(Defense)",@"攻击占比",@"攻击成功",@"防守成功"]];
+    self.title = @"据点成员数据";
+    self.titleNameArray =  @[@[@"公会成员",@"胜利",@"贡献度",@"已出刀",@"防守成功"]];
     self.view.backgroundColor = UIColor.whiteColor;
     [self createSubView];
-    self.navigationController.navigationBar.hidden = YES;
+     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
     });
-    self.shareBtn.frame = CGRectMake(SCREEN_WIDTH - 40 - 10 , 50, 40, 40);
-    [self.view addSubview:self.shareBtn];
-    self.otherGuildDataSource = [NSMutableArray arrayWithArray:[[GameDataManage shareManage]getOtherGuildInfo]];
+    
     [self sortMemberDataSource];
     
     // Do any additional setup after loading the view.
@@ -47,6 +47,8 @@
     self.imageView.frame = self.view.bounds;
     self.imageView.alpha = 0.4;
     [self.view addSubview:self.tableView];
+    self.backBtn.frame = CGRectMake(15 , 50, 70, 70);
+    [self.view addSubview:self.backBtn];
 }
 
 -(UITableView *)tableView {
@@ -60,7 +62,6 @@
         _tableView.backgroundColor = UIColor.clearColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:@"BatteleBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BatteleBaseTableViewCell"];
-        
     }
     return _tableView;
     
@@ -187,11 +188,12 @@
 }
 
 -(void)showBattleDataImage:(UIButton*)sender{
-    self.image = [self screenshotForView:self.tableView];
-    
-    if (self.image) {
-        UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
-    }
+//    self.image = [self screenshotForView:self.tableView];
+    MemberDetaiViewController * vc = [[MemberDetaiViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+//    if (self.image) {
+//        UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+//    }
 }
 // 指定回调方法
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
@@ -240,7 +242,18 @@
     UIGraphicsEndImageContext();
     return image;
 }
+-(void)clickBackBtn:(UIButton*)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - Lazy load
+-(UIButton *)backBtn{
+    if (!_backBtn) {
+        _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backBtn setImage:[UIImage imageNamed:@"r_music_close"] forState:UIControlStateNormal];
+        [_backBtn addTarget:self action:@selector(clickBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return  _backBtn;
+}
 -(UIButton *)shareBtn{
     if (!_shareBtn) {
         _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -273,7 +286,7 @@
 }
 -(NSMutableArray *)memberDataSource{
     if (!_memberDataSource) {
-        _memberDataSource = [[NSMutableArray alloc]initWithArray:[[GameDataManage shareManage] getSetUpTotalMemberInfo]];
+        _memberDataSource = [[NSMutableArray alloc]initWithArray:[[GameDataManage shareManage] getMachUpTotalMemberInfo]];
     }
     return  _memberDataSource;
 }

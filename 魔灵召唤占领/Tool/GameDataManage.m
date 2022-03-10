@@ -84,7 +84,7 @@
     
     self.dataModel = [[GameBattleModel alloc]init];
     [self.dataModel parseDataWithDic:jsonDict];
-    
+    //    if (!battleData) {
 }
 -(long)getMachId{
     long machId = 0;
@@ -269,8 +269,8 @@
         }
     }
     return defenseLoseCount;
-}
--(NSArray*)getSetUpTotalMemberInfo {
+} 
+-(NSArray*)getMachUpTotalMemberInfo {
     NSMutableArray * setUpDataSource = [[NSMutableArray alloc]init];
     NSArray * memberInfoArr = [[GameDataManage shareManage].dataModel.matchup_info.member_info_list copy];
     for (GameMemberInfo* model in memberInfoArr) {

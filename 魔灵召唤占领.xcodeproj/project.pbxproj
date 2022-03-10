@@ -19,6 +19,8 @@
 		D8221DBE27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DBD27C38EAC005FC84E /* GameSpecialBaseRuleInfo.m */; };
 		D8221DC127C39377005FC84E /* GameSetUpValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DC027C39377005FC84E /* GameSetUpValueInfo.m */; };
 		D8221DC427C397F6005FC84E /* GameBattleLogInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8221DC327C397F6005FC84E /* GameBattleLogInfo.m */; };
+		D87FE49D27D9F1B000E9380F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FE49C27D9F1B000E9380F /* HomeViewController.m */; };
+		D87FE4A027D9FBA100E9380F /* HistoryBattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FE49F27D9FBA100E9380F /* HistoryBattleViewController.m */; };
 		D8863EAB27BE2415005497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863EAA27BE2415005497B0 /* AppDelegate.m */; };
 		D8863EB127BE2415005497B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8863EB027BE2415005497B0 /* ViewController.m */; };
 		D8863EB627BE2418005497B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8863EB527BE2418005497B0 /* Assets.xcassets */; };
@@ -66,6 +68,10 @@
 		D8221DC027C39377005FC84E /* GameSetUpValueInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSetUpValueInfo.m; sourceTree = "<group>"; };
 		D8221DC227C397F6005FC84E /* GameBattleLogInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBattleLogInfo.h; sourceTree = "<group>"; };
 		D8221DC327C397F6005FC84E /* GameBattleLogInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBattleLogInfo.m; sourceTree = "<group>"; };
+		D87FE49B27D9F1B000E9380F /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D87FE49C27D9F1B000E9380F /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D87FE49E27D9FBA100E9380F /* HistoryBattleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBattleViewController.h; sourceTree = "<group>"; };
+		D87FE49F27D9FBA100E9380F /* HistoryBattleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBattleViewController.m; sourceTree = "<group>"; };
 		D8863EA627BE2415005497B0 /* 魔灵召唤占领.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "魔灵召唤占领.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8863EA927BE2415005497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8863EAA27BE2415005497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -203,6 +209,8 @@
 		D8863EC527BE248F005497B0 /* Moudle */ = {
 			isa = PBXGroup;
 			children = (
+				D8A5AC6E27C4B04100D5E6E6 /* GameTabbarViewController.h */,
+				D8A5AC6F27C4B04100D5E6E6 /* GameTabbarViewController.m */,
 				D8863EC827BE24B0005497B0 /* View */,
 				D8863EC727BE24A5005497B0 /* ViewController */,
 			);
@@ -223,12 +231,14 @@
 		D8863EC727BE24A5005497B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D87FE49B27D9F1B000E9380F /* HomeViewController.h */,
+				D87FE49C27D9F1B000E9380F /* HomeViewController.m */,
 				D8863EAF27BE2415005497B0 /* ViewController.h */,
 				D8863EB027BE2415005497B0 /* ViewController.m */,
-				D8A5AC6E27C4B04100D5E6E6 /* GameTabbarViewController.h */,
-				D8A5AC6F27C4B04100D5E6E6 /* GameTabbarViewController.m */,
 				D8AEF77F27CF0B0B00B75141 /* MemberDetaiViewController.h */,
 				D8AEF78027CF0B0B00B75141 /* MemberDetaiViewController.m */,
+				D87FE49E27D9FBA100E9380F /* HistoryBattleViewController.h */,
+				D87FE49F27D9FBA100E9380F /* HistoryBattleViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -413,6 +423,7 @@
 				D8A5AC6C27C475AA00D5E6E6 /* GameDataManage.m in Sources */,
 				D8221DA827C38902005FC84E /* GameBattleBaseInfo.m in Sources */,
 				D8221DB227C38C69005FC84E /* GameDefenseDeckAssignInfo.m in Sources */,
+				D87FE49D27D9F1B000E9380F /* HomeViewController.m in Sources */,
 				D8863ECB27BE27C7005497B0 /* GameBattleModel.m in Sources */,
 				D8AEF78127CF0B0B00B75141 /* MemberDetaiViewController.m in Sources */,
 				D8863EB127BE2415005497B0 /* ViewController.m in Sources */,
@@ -434,6 +445,7 @@
 				D8221DC427C397F6005FC84E /* GameBattleLogInfo.m in Sources */,
 				D8221DA527C38755005FC84E /* GameBattleGuildInfo.m in Sources */,
 				D8221DB827C38D56005FC84E /* GameUsedUnitCountInfo.m in Sources */,
+				D87FE4A027D9FBA100E9380F /* HistoryBattleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
