@@ -31,9 +31,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     [self createSubView];
     self.navigationController.navigationBar.hidden = YES;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-    });
+     
     self.shareBtn.frame = CGRectMake(SCREEN_WIDTH - 40 - 10 , 50, 40, 40);
     [self.view addSubview:self.shareBtn];
     self.otherGuildDataSource = [NSMutableArray arrayWithArray:[[GameDataManage shareManage]getOtherGuildInfo]];
@@ -187,7 +185,15 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
-
+#pragma mark - Function
+-(NSArray*)getTitileArr{
+    NSMutableArray * titleArr = [[NSMutableArray alloc]init];
+    NSArray * attackLogList = [[GameDataManage shareManage].dataModel.attack_log.log_list copy];
+    
+    
+    
+    return [titleArr copy];
+}
 -(void)showBattleDataImage:(UIButton*)sender{
 //    self.image = [self screenshotForView:self.tableView];
     MemberDetaiViewController * vc = [[MemberDetaiViewController alloc]init];

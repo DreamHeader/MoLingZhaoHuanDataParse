@@ -37,6 +37,7 @@
 		D8AB781A27C5D34500426E2E /* BatteleBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AB781827C5D34500426E2E /* BatteleBaseTableViewCell.xib */; };
 		D8AB781E27C60FEA00426E2E /* UIColor+Up.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB781D27C60FEA00426E2E /* UIColor+Up.m */; };
 		D8AEF78127CF0B0B00B75141 /* MemberDetaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEF78027CF0B0B00B75141 /* MemberDetaiViewController.m */; };
+		DA9C077D27E180DA0022C7B3 /* HistoryBattleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C077C27E180DA0022C7B3 /* HistoryBattleModel.m */; };
 		E31F8B39D16773AF7BFA66C8 /* libPods-魔灵召唤占领.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0352CBD9E462CA6A5D803216 /* libPods-魔灵召唤占领.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		D8AB781D27C60FEA00426E2E /* UIColor+Up.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Up.m"; sourceTree = "<group>"; };
 		D8AEF77F27CF0B0B00B75141 /* MemberDetaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberDetaiViewController.h; sourceTree = "<group>"; };
 		D8AEF78027CF0B0B00B75141 /* MemberDetaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberDetaiViewController.m; sourceTree = "<group>"; };
+		DA9C077B27E180DA0022C7B3 /* HistoryBattleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBattleModel.h; sourceTree = "<group>"; };
+		DA9C077C27E180DA0022C7B3 /* HistoryBattleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBattleModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,7 @@
 		D8863EC427BE2486005497B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DA9C077A27E180A30022C7B3 /* HistoryDataModel */,
 				D8A4E6C427CE19DE00028C01 /* MemberInfo */,
 				D8863ED527BE448B005497B0 /* GameBattle */,
 			);
@@ -303,6 +307,15 @@
 				D8AB781D27C60FEA00426E2E /* UIColor+Up.m */,
 			);
 			path = Function;
+			sourceTree = "<group>";
+		};
+		DA9C077A27E180A30022C7B3 /* HistoryDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C077B27E180DA0022C7B3 /* HistoryBattleModel.h */,
+				DA9C077C27E180DA0022C7B3 /* HistoryBattleModel.m */,
+			);
+			path = HistoryDataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +445,7 @@
 				D8221DC127C39377005FC84E /* GameSetUpValueInfo.m in Sources */,
 				D8AB781927C5D34500426E2E /* BatteleBaseTableViewCell.m in Sources */,
 				D8A5AC7027C4B04100D5E6E6 /* GameTabbarViewController.m in Sources */,
+				DA9C077D27E180DA0022C7B3 /* HistoryBattleModel.m in Sources */,
 				D8863ECE27BE4450005497B0 /* GameMatchupInfo.m in Sources */,
 				D8221DA227C38664005FC84E /* GameAttackPerInfo.m in Sources */,
 				D8221DAC27C38A9D005FC84E /* GameWizardInfo.m in Sources */,

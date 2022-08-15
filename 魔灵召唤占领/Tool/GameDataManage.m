@@ -97,6 +97,10 @@
 -(long)getSelfGuildId{
     NSArray * arr = [self.dataModel.matchup_info.member_info_list copy];
     GameMemberInfo * model = arr.firstObject;
+    // 当处于未开战的情况下 这些数据都没有了 目前自己写死
+    if (!model) {
+        return 32119;
+    }
     return  model.guild_id;
 }
 -(GameBattleGuildInfo *)getSelfGuildInfo{
@@ -429,4 +433,8 @@
     }
     return  count;
 }
+
+
+
+
 @end
