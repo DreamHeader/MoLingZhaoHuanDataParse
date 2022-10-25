@@ -118,13 +118,14 @@
         cell.currentScoreLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
         cell.defenseBattleRateLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
         cell.gonghuiNameLabel.textColor = attackRate >= 70 ? UIColor.blackColor : UIColor.redColor;
+        cell.errorview.hidden = attackRate >= 70 || model.attact_total_count == 0;
     }
     
     return  cell;
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40;
+    return 45;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return section == 0 ? 20 : 0.1;

@@ -305,7 +305,7 @@
         newData.defense_win_count = defenseWinCount;
         newData.defense_lose_count = defenseLoseCount;
         newData.defense_total_count = defenseAllCount;
-        newData.battleScore = attackWinCount*15+defenseWinCount*5;
+        newData.battleScore = attackWinCount*30+defenseWinCount*5;
         [setUpDataSource addObject:newData];
     }
     return [setUpDataSource copy];

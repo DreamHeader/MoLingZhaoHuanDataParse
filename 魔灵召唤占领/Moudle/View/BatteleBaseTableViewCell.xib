@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tip" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-oS-ZE4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="178.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-MB-ehc">
                         <rect key="frame" x="10" y="81.5" width="71" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -69,6 +72,9 @@
                     <constraint firstItem="o3u-le-9Mg" firstAttribute="leading" secondItem="EkC-Wf-P0q" secondAttribute="trailing" id="KDd-at-Ynh"/>
                     <constraint firstItem="NKn-o7-y9m" firstAttribute="height" secondItem="HoO-MB-ehc" secondAttribute="height" id="KSr-ua-GmH"/>
                     <constraint firstItem="EkC-Wf-P0q" firstAttribute="height" secondItem="HoO-MB-ehc" secondAttribute="height" id="N77-IX-Uq7"/>
+                    <constraint firstItem="9Qf-zh-BoU" firstAttribute="top" secondItem="8Rg-oS-ZE4" secondAttribute="bottom" id="OyA-V3-FjB"/>
+                    <constraint firstAttribute="trailing" secondItem="8Rg-oS-ZE4" secondAttribute="trailing" id="PQo-OH-jlD"/>
+                    <constraint firstItem="8Rg-oS-ZE4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ROh-9s-P9y"/>
                     <constraint firstAttribute="trailing" secondItem="NKn-o7-y9m" secondAttribute="trailing" constant="10" id="U8Y-RZ-Chc"/>
                     <constraint firstItem="7QC-rk-QIg" firstAttribute="width" secondItem="HoO-MB-ehc" secondAttribute="width" id="UQO-0C-tbb"/>
                     <constraint firstItem="o3u-le-9Mg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="X4U-MF-5IL"/>
@@ -82,6 +88,7 @@
                     <constraint firstItem="9Qf-zh-BoU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hSk-dt-Tpp"/>
                     <constraint firstItem="o3u-le-9Mg" firstAttribute="height" secondItem="HoO-MB-ehc" secondAttribute="height" id="iu0-hK-B8r"/>
                     <constraint firstItem="NKn-o7-y9m" firstAttribute="width" secondItem="HoO-MB-ehc" secondAttribute="width" id="uOd-rg-1Yo"/>
+                    <constraint firstItem="8Rg-oS-ZE4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xjG-fH-Xnc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -89,12 +96,14 @@
                 <outlet property="attackRateLabel" destination="7QC-rk-QIg" id="N4A-XN-e6y"/>
                 <outlet property="currentScoreLabel" destination="o3u-le-9Mg" id="aVp-6S-LkL"/>
                 <outlet property="defenseBattleRateLabel" destination="NKn-o7-y9m" id="xH0-cT-87Z"/>
+                <outlet property="errorview" destination="8Rg-oS-ZE4" id="huM-gV-l84"/>
                 <outlet property="gonghuiNameLabel" destination="HoO-MB-ehc" id="XSc-jP-F5i"/>
             </connections>
             <point key="canvasLocation" x="57.24637681159421" y="124.21875"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="tip" width="222" height="81"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

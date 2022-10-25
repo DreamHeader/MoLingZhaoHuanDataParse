@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *attackCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentScoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *defenseBattleRateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *errorview;
 
 @end
 
